@@ -2,7 +2,6 @@ import axios from 'axios';
 import dotenv from 'dotenv';
 dotenv.config();
 
-// const APIKEY = '63a0ab7dcd2bc7044eed273afb291f71';
 const API = {
 
     getWeather: function(lat,lng){
