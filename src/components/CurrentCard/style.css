@@ -1,0 +1,14 @@
+.current-card {
+    background: blue;
+    color: lightyellow;
+    padding: 5px;
+    border: 2px solid lightgray;
+    border-radius: 8px;
+    box-shadow: 8px 8px 3em 10px inset darkblue;
+    max-width: 30vw;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    justify-content: center;
+    margin-bottom: 80px;
+
+}
