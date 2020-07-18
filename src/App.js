@@ -5,6 +5,8 @@ import NotFound from './pages/NotFound';
 import Search from './pages/Search';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+
+
 function App() {
   return (
     <Router>
@@ -18,9 +20,6 @@ function App() {
         <Route>
           <NotFound />
         </Route>
-
-
-
       </Switch>
     </Router>
     
