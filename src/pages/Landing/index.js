@@ -16,13 +16,12 @@ export default class Landing extends Component {
 
 
             <div>
-                <Navbar />
-                <Jumbotron />
+             
                 <header>
                     <h1 className="text-center">Your Current Weather</h1>
                 </header>
                 <CurrentCard />
-                <Footer />
+             
             </div>
         )
     }

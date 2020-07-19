@@ -6,7 +6,7 @@ export default function index() {
 
         <footer className="footer fixed-bottom text-center">
 
-            <p>Copyright &copy;&lt;<a href="http://bit.ly/zgs-portfolio">ZGS</a>&gt;</p>
+            <p>Copyright &copy;&lt;<a href="http://bit.ly/zgs-portfolio" target="_blank">ZGS</a>&gt;</p>
 
         </footer>
 

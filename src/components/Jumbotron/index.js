@@ -2,7 +2,6 @@ import React from 'react'
 import './style.css';
 import { Jumbotron, Container } from 'react-bootstrap';
 
-
 export default function index() {
     return (
         <Jumbotron fluid className="jumbotron-style">

@@ -1,9 +1,9 @@
 import React from 'react';
-import {Navbar, Nav, Form, FormControl, Button} from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 
 export default function index() {
     return (
-        <Navbar fixed="top" variant="dark">
+        <Navbar variant="dark" expand="sm" className="navbar-style">
         <Navbar.Brand href="/">Weather React</Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link href="/">Home</Nav.Link>

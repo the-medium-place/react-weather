@@ -3,7 +3,7 @@ import API from '../../utils/API';
 import { Fade, Bounce } from 'react-awesome-reveal';
 import './style.css';
 import { motion } from 'framer-motion';
-import { Frame } from 'framer';
+// import { Frame } from 'framer';
 
 export default class CurrentCard extends Component {
 
@@ -12,9 +12,10 @@ export default class CurrentCard extends Component {
         lng: null,
         lat: null,
         temp: null,
-        humidit: null,
+        humidity: null,
         icon: null,
-        desc: null
+        desc: null,
+        date: null
     }
 
     componentDidMount() {
@@ -31,7 +32,8 @@ export default class CurrentCard extends Component {
                         humidity: data.data.current.humidity,
                         iconSRC: `http://openweathermap.org/img/wn/${data.data.current.weather[0].icon}@4x.png`,
                         desc: data.data.current.weather[0].description,
-                        uvi: data.data.current.uvi
+                        uvi: data.data.current.uvi,
+                        date: data.data.current.sunrise
 
 
 
@@ -41,15 +43,14 @@ export default class CurrentCard extends Component {
     };
 
     render() {
-        const variants = {
-
-        }
+        const newDate = new Date(this.state.date);
+        console.log(newDate)
         return (
                 <Fade>
                     <Bounce>
                             <motion.div 
                             className="d-flex current-card"
-                            whileHover={{ scale: 1.2 }}>
+                            whileHover={{ scale: 1.2 }} >
                                 <div className="text-center">
                                     {(!this.state.iconSRC) ?
                                         <h1>Loading Weather...</h1> :
@@ -64,7 +65,9 @@ export default class CurrentCard extends Component {
                                                 // whileHover={{ scale: 1.6 }}
                                                 // whileTap={{scale: 0.9}}
                                                 src={this.state.iconSRC} 
-                                                alt="weather icon" />
+                                                alt="weather icon" 
+                                                className="weather-icon"
+                                                />  
                                             <p>{(this.state.desc).toUpperCase()}</p>
                                         </>
                                     }

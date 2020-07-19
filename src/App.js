@@ -4,12 +4,17 @@ import Landing from './pages/Landing';
 import NotFound from './pages/NotFound';
 import Search from './pages/Search';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
+import Navbar from './components/NavBar';
+import Jumbotron from './components/Jumbotron';
+import Footer from './components/Footer';
 
 
 function App() {
   return (
+
     <Router>
+      <Navbar />
+      <Jumbotron />
       <Switch>
         <Route exact path={["/"]}>
           <Landing />
@@ -21,6 +26,7 @@ function App() {
           <NotFound />
         </Route>
       </Switch>
+      <Footer />
     </Router>
     
   );

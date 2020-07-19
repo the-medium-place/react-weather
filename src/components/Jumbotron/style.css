@@ -1,5 +1,5 @@
 .jumbotron-style {
-    background: salmon;
-    color: white;
-    box-shadow: 8px 8px 5em 10px inset red;
+    background: none;
+    color: azure;
+    height: 20vh;
 }
