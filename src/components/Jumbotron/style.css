@@ -1,5 +1,9 @@
 .jumbotron-style {
     background: none;
     color: azure;
-    height: 20vh;
+    height: 23vh; 
+}
+
+.jumbotron-style h1 {
+    font-size: 4em;
 }

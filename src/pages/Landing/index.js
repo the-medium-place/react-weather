@@ -1,29 +1,20 @@
-import React, { Component } from 'react'
-import Jumbotron from '../../components/Jumbotron';
-import Footer from '../../components/Footer';
+import React from 'react'
 import CurrentCard from '../../components/CurrentCard';
-import Navbar from '../../components/NavBar';
+import './style.css';
 
-export default class Landing extends Component {
+export default function index() {
 
-    state = {
-
-    }
-
-
-    render() {
-        return (
-
-
-            <div>
-             
+    return(    
+            <div className="landing-box">        
                 <header>
-                    <h1 className="text-center">Your Current Weather</h1>
+                    <h1 className="text-center">Current Weather in Your Area</h1>
                 </header>
-                <CurrentCard />
-             
+                <CurrentCard />    
             </div>
         )
-    }
-
 }
+
+
+
+
+

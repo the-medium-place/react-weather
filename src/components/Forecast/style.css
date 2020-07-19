@@ -1,21 +1,21 @@
-.current-card {
+.forecast-card {
+    max-width: 19vw;
     background: blue;
     color: azure;
     padding: 5px;
     border: 2px solid azure;
     border-radius: 8px;
     box-shadow: 8px 8px 3em 10px inset darkblue;
-    /* width: 30vw; */
     margin: 0 auto;
     margin-bottom: 10px;
     justify-content: center;
     margin-bottom: 80px;
-
 }
-/* 
-@media screen and (max-width: 600px) {
-    .card-content {
-        width: auto !important;
-        
+
+@media screen and (max-width: 900px) {
+    .forecast-card {
+        flex-direction: column;
+        justify-content: center;
+        max-width: 80vw;
     }
-} */
+}

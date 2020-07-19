@@ -1,3 +1,18 @@
 .search-box {
     justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.card-wrapper {
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+@media screen and (max-width: 900px) {
+    .card-wrapper {
+        flex-direction: column;
+
+    }
 }

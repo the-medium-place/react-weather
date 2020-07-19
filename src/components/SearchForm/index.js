@@ -1,11 +1,11 @@
 import React from 'react';
-import { Form, Col, FormControl, Button, FormGroup, FormLabel } from 'react-bootstrap';
+import { Form, FormControl, Button, FormGroup, FormLabel } from 'react-bootstrap';
 import './style.css';
 
 export default function index(props) {
     return (
+<div className="searchbar-wrapper d-flex">
 
-        <Col md={6}>
             <Form onSubmit={props.getResults} className="search-form">
                 <FormGroup>
 
@@ -15,6 +15,6 @@ export default function index(props) {
                     <Button variant="outline-light" className="mt-2">Search</Button>
                 </FormGroup>
             </Form>
-        </Col>
+</div>
     )
 }

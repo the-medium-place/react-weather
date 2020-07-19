@@ -2,4 +2,11 @@
     justify-content: center;
     font-weight: bold;
     color: azure;
+    margin-top: 3rem;
+    width: 50vw;
+}
+
+.searchbar-wrapper {
+    width: 100%;
+    justify-content: center;
 }
