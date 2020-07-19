@@ -11,6 +11,11 @@ const API = {
         return axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lng}&appid=${APIKEY}&units=imperial`)
     },
 
+    getWeatherCity: function(city){
+        return axios.get(`https://api.openweathermap.org/data/2.5/onecall?q=${city}&appid=${APIKEY}&units=imperial`)
+
+    },
+
     citySearch: function(city){
         return axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKEY}&units=imperial`)
     },

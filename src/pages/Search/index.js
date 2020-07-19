@@ -10,7 +10,7 @@ export default class Search extends Component {
 
     state = {
         search: '',
-        results: []
+        forecastResults: []
     }
 
     handleInputChange = event => {
@@ -25,28 +25,22 @@ export default class Search extends Component {
         event.preventDefault();
         API.getForecastCity(this.state.search)
             .then((data) => {
-                // console.log(data);
-                for (let i = 0; i < data.data.list.length; i += 8) {
-                    forecastArr.push(data.data.list[i]);
-                }
-                this.setState({
-                    results: forecastArr,
+                console.log(data);
+
+                API.getWeather(data.data.city.coord.lat, data.data.city.coord.lon)
+                .then((newData)=>{
+                    console.log(newData)
+                    for (let i = 0; i < 5; i++) {
+                        forecastArr.push(newData.data.daily[i]);
+                    }
+                    this.setState({
+                        forecastResults: forecastArr
+                    })
+                    console.log(this.state.forecastResults);
+                
                 })
-                console.log(this.state.results);
             })
     }
-
-    // renderResults = () => {
-    //     if (this.state.results.length < 1) {
-    //         return <h1>test</h1>;
-    //     } else {
-    //         return (<div>
-    //             {}
-    //         </div>);
-
-    //     }
-
-    // }
 
 
 
@@ -58,13 +52,14 @@ export default class Search extends Component {
 
                 <SearchForm getResults={this.getResults} handleInputChange={this.handleInputChange} />
                 <div className="d-flex card-wrapper">
-                    {this.state.results.length > 4 ? this.state.results.map((forecast, index) => {
+                    {this.state.forecastResults.length > 4 ? this.state.forecastResults.map((forecast, index) => {
                         return(
                         <Forecast 
                             key={index}
-                            date={forecast.dt_txt.substr(0,10)}
-                            temp={forecast.main.temp}
-                            humidity={forecast.main.humidity}
+                            date={forecast.dt}
+                            tempHI={forecast.temp.max}
+                            tempLO={forecast.temp.min}
+                            humidity={forecast.humidity}
                             desc={forecast.weather[0].description}
                             icon={forecast.weather[0].icon}
                         />
