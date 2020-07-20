@@ -7,6 +7,20 @@
 .card-wrapper {
     flex-direction: row;
     justify-content: space-evenly;
+    color: azure;
+    text-align: center;
+}
+
+.search-current {
+    flex-direction: column;
+    justify-content: center;
+    color: azure;
+
+}
+
+.forecast-title {
+    width: 100%;
+    color: azure;
 }
 
 

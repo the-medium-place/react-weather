@@ -23,7 +23,7 @@ export default function index(props) {
                                     {(!props.iconSRC) ?
                                         <h1>Loading Weather...</h1> :
                                         <>
-                                            <h1>{props.date.substr(3,12)}</h1>
+                                            <h1>{props.date.substr(0,9)}</h1>
                                             <h2>{props.temp}&deg; F</h2>
                                             <h4>{props.humidity}% Humidity</h4>
                                                 <motion.img 

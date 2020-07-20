@@ -17,7 +17,7 @@ export default function index(props) {
                         {(!props.icon) ?
                             <h3>Loading Weather...</h3> :
                             <>
-                                <h4>{props.date}</h4>
+                                <h4>{new Date(props.date*1000).toLocaleString().substr(0,9)}</h4>
                                 <h4>High: {props.tempHI}&deg; F</h4>
                                 <h4>Low: {props.tempLO}&deg; F</h4>
                                 <h4>{props.humidity}% Humidity</h4>

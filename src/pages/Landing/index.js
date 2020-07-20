@@ -25,13 +25,15 @@ export default class Landing extends Component {
             API.getWeather(position.coords.latitude, position.coords.longitude)
                 .then((data) => {
                     console.log(data);
+                    const newDate = new Date(data.data.current.dt*1000).toLocaleString();
+                    console.log(newDate);
                     this.setState({
                         temp: data.data.current.temp,
                         humidity: data.data.current.humidity,
                         iconSRC: `http://openweathermap.org/img/wn/${data.data.current.weather[0].icon}@4x.png`,
                         desc: data.data.current.weather[0].description,
                         uvi: data.data.current.uvi,
-                        date: Date(data.data.current.dt)
+                        date: newDate
 
 
 
