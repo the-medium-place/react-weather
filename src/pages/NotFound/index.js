@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
+import './style.css';
 
 export default function index() {
     return (
-        <div>
+        <div className="error-404-box text-center">
  
-            <h1>404 page not found</h1>
-          
+            <p>404 error - Page not found</p>
             
         </div>
     )

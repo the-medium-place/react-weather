@@ -24,9 +24,9 @@ export default class Landing extends Component {
             })
             API.getWeather(position.coords.latitude, position.coords.longitude)
                 .then((data) => {
-                    console.log(data);
+                    // console.log(data);
                     const newDate = new Date(data.data.current.dt*1000).toLocaleString();
-                    console.log(newDate);
+                    // console.log(newDate);
                     this.setState({
                         temp: data.data.current.temp,
                         humidity: data.data.current.humidity,

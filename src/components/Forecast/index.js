@@ -4,7 +4,7 @@ import { Fade, Bounce } from 'react-awesome-reveal';
 import { motion } from 'framer-motion';
 
 export default function index(props) {
-    console.log(props);
+    // console.log(props);
     return (
         <Fade>
             <Bounce>
@@ -37,14 +37,7 @@ export default function index(props) {
                         }
                     </div>
                 </motion.div>
-
-
-
             </Bounce>
         </Fade>
-
-
     )
-
-
 }
