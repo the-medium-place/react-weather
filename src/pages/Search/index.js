@@ -4,7 +4,6 @@ import API from '../../utils/API';
 import SearchForm from '../../components/SearchForm';
 import Forecast from '../../components/Forecast';
 import CurrentCard from '../../components/CurrentCard';
-import { Col } from 'react-bootstrap';
 
 
 export default class Search extends Component {
@@ -36,7 +35,7 @@ export default class Search extends Component {
                 this.setState({
                     temp: data.data.main.temp,
                     humidity: data.data.main.humidity,
-                    iconSRC: `http://openweathermap.org/img/wn/${data.data.weather[0].icon}@4x.png`,
+                    iconSRC: `https://openweathermap.org/img/wn/${data.data.weather[0].icon}@4x.png`,
                     desc: data.data.weather[0].description,
                     uvi: '',
                     // date: data.data.dt
@@ -91,6 +90,7 @@ export default class Search extends Component {
                         return (
                             <>
                                 <Forecast
+                                    id={index}
                                     key={index}
                                     date={forecast.dt}
                                     tempHI={forecast.temp.max}

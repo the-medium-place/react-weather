@@ -10,8 +10,8 @@ export default function index(props) {
             <Bounce>
                 <motion.div
                     className="forecast-card d-flex"
-                    // className="d-flex"
-                    whileHover={{ scale: 1.2 }} >
+                    whileHover={{ scale: 1.2 }}
+                    id={props.id} >
 
                     <div className="text-center card-content">
                         {(!props.icon) ?
@@ -28,7 +28,7 @@ export default function index(props) {
                                     // dragConstraints={{ left: -100, right: 100 }} 
                                     // whileHover={{ scale: 1.6 }}
                                     // whileTap={{scale: 0.9}}
-                                    src={`http://openweathermap.org/img/wn/${props.icon}@4x.png`}
+                                    src={`https://openweathermap.org/img/wn/${props.icon}@4x.png`}
                                     alt="weather icon"
                                     className="weather-icon"
                                 />
