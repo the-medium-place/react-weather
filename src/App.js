@@ -7,6 +7,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from './components/NavBar';
 import Jumbotron from './components/Jumbotron';
 import Footer from './components/Footer';
+import dotenv from 'dotenv';
+dotenv.config();
 
 
 function App() {
