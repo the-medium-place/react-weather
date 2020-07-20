@@ -47,7 +47,7 @@ export default class Search extends Component {
                 API.getWeather(data.data.coord.lat, data.data.coord.lon)
                     .then((newData) => {
                         console.log(newData)
-                        for (let i = 0; i < 5; i++) {
+                        for (let i = 1; i < 6; i++) {
                             forecastArr.push(newData.data.daily[i]);
                         }
                         this.setState({
