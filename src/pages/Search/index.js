@@ -31,7 +31,7 @@ export default class Search extends Component {
         event.preventDefault();
         API.citySearch(this.state.search)
             .then((data) => {
-                console.log(data);
+                // console.log(data);
                 this.setState({
                     temp: data.data.main.temp,
                     humidity: data.data.main.humidity,
@@ -41,18 +41,18 @@ export default class Search extends Component {
                     // date: data.data.dt
 
                 })
-                console.log(this.state)
+                // console.log(this.state)
 
                 API.getWeather(data.data.coord.lat, data.data.coord.lon)
                     .then((newData) => {
-                        console.log(newData)
+                        // console.log(newData)
                         for (let i = 1; i < 6; i++) {
                             forecastArr.push(newData.data.daily[i]);
                         }
                         this.setState({
                             forecastResults: forecastArr
                         })
-                        console.log(this.state.forecastResults);
+                        // console.log(this.state.forecastResults);
 
                     })
             })
@@ -79,11 +79,11 @@ export default class Search extends Component {
                                 uvi={this.state.uvi}
                                 date={this.state.date}
                             />
-                        </> : console.log('nothing')
+                        </> : <></>
                     }
                 </div>
                     <div className="text-center forecast-title">
-                    {this.state.forecastResults.length > 4 ? <h2>5-Day Forecast</h2> : console.log('nothing')}
+                    {this.state.forecastResults.length > 4 ? <h2>5-Day Forecast</h2> : <></>}
                     </div>
                 <div className="d-flex card-wrapper text-center">
                     {this.state.forecastResults.length > 4 ? this.state.forecastResults.map((forecast, index) => {
