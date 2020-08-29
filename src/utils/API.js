@@ -8,6 +8,7 @@ const APIKEY = process.env.REACT_APP_WEATHER_API_KEY;
 const API = {
 
     getWeather: function(lat,lng){
+        console.log(process.env)
         return axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lng}&appid=${APIKEY}&units=imperial`)
     },
 
